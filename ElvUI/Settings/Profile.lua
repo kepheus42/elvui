@@ -116,6 +116,8 @@ P['databars'] = {
 		['height'] = 180,
 		['textFormat'] = 'NONE',
 		['textSize'] = 11,
+		["font"] = "PT Sans Narrow",
+		["fontOutline"] = "NONE",
 		['mouseover'] = false,
 		['orientation'] = 'VERTICAL',
 		["reverseFill"] = false,
@@ -129,6 +131,8 @@ P['databars'] = {
 		['height'] = 180,
 		['textFormat'] = 'NONE',
 		['textSize'] = 11,
+		["font"] = "PT Sans Narrow",
+		["fontOutline"] = "NONE",
 		['mouseover'] = false,
 		['orientation'] = 'VERTICAL',
 		["reverseFill"] = false,
@@ -141,11 +145,14 @@ P['databars'] = {
 		['height'] = 180,
 		['textFormat'] = 'NONE',
 		['textSize'] = 11,
+		["font"] = "PT Sans Narrow",
+		["fontOutline"] = "NONE",
 		['mouseover'] = false,
 		['orientation'] = 'VERTICAL',
 		["reverseFill"] = false,
 		["hideInVehicle"] = false,
 		["hideInCombat"] = false,
+		["hideAtMaxLevel"] = false,
 	},
 	['honor'] = {
 		['enable'] = true,
@@ -153,6 +160,8 @@ P['databars'] = {
 		['height'] = 180,
 		['textFormat'] = 'NONE',
 		['textSize'] = 11,
+		["font"] = "PT Sans Narrow",
+		["fontOutline"] = "NONE",
 		['mouseover'] = false,
 		['orientation'] = 'VERTICAL',
 		["reverseFill"] = false,
@@ -217,6 +226,7 @@ P["nameplates"] = {
 	["clampToScreen"] = false,
 	["loadDistance"] = 40,
 	["useTargetGlow"] = true,
+	["alwaysShowTargetHealth"] = true,
 	["classbar"] = {
 		["enable"] = true,
 		["attachTo"] = "TARGET",
@@ -245,13 +255,23 @@ P["nameplates"] = {
 
 	["clickableWidth"] = 150,
 	["clickableHeight"] = 50,
+	["clickThrough"] = {
+		["personal"] = false,
+		["friendly"] = false,
+		["enemy"] = false,
+	},
 
 	['units'] = {
 		['PLAYER'] = {
 			['enable'] = false,
-			["alwaysShow"] = false,
+			["useStaticPosition"] = false,
 			["clickthrough"] = false,
-			["combatFade"] = false,
+			["visibility"] = {
+				["showAlways"] = false,
+				["showInCombat"] = true,
+				["showWithTarget"] = false,
+				["hideDelay"] = 3,
+			},
 			['healthbar'] = {
 				['enable'] = true,
 				['height'] = 10,
@@ -783,6 +803,7 @@ P['tooltip'] = {
 		['height'] = 7,
 		['font'] = 'Homespun',
 		['fontSize'] = 10,
+		["fontOutline"] = "OUTLINE",
 		['statusPosition'] = "BOTTOM",
 	},
 	["useCustomFactionColors"] = false,
@@ -858,7 +879,9 @@ P['unitframe'] = {
 		['healPrediction'] = {
 			['personal'] = {r = 0, g = 1, b = 0.5, a = 0.25},
 			['others'] = {r = 0, g = 1, b = 0, a = 0.25},
-			['absorbs'] = {r = 1, g = 1, b = 0, a = 0.25}
+			['absorbs'] = {r = 1, g = 1, b = 0, a = 0.25},
+			['healAbsorbs'] = {r = 1, g = 0, b = 0, a = 0.25},
+			["maxOverflow"] = 0,
 		},
 
 		['classResources'] = {
