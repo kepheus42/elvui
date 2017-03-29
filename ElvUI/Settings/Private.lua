@@ -12,6 +12,7 @@ V['general'] = {
 	['chatBubbles'] = 'backdrop',
 	['chatBubbleFont'] = "PT Sans Narrow",
 	['chatBubbleFontSize'] = 14,
+	['chatBubbleFontOutline'] = "NONE",
 	['pixelPerfect'] = true,
 	['replaceBlizzFonts'] = true,
 	['minimap'] = {
@@ -20,6 +21,7 @@ V['general'] = {
 		['hideCalendar'] = true,
 	},
 	["classColorMentionsSpeech"] = true,
+	["raidUtility"] = true,
 }
 
 V['bags'] = {
